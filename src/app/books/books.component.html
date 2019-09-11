@@ -1,0 +1,85 @@
+<div class="main-content">
+  <ngx-loading
+    [show]="loading"
+    [config]="{ backdropBorderRadius: '3px' }"
+  ></ngx-loading>
+  <div class="container-fluid">
+    <div class="row" style="background: #5E57E7;">
+      <form class="navbar-form">
+        <div class="com-sm-12">
+          <div class="row">
+            <table class="table " style="margin-bottom: none !important;">
+              <tbody>
+                <tr>
+                  <td class="tdclass">
+                    <input
+                      style="margin-left: 10%;"
+                      (click)="goToDashboard()"
+                      type="image"
+                      src="assets/img/drawable-hdpi/ic_left_arrow.png"
+                    />
+                  </td>
+                  <td>
+                    <input
+                      type="text"
+                      value=""
+                      class="form-control"
+                      placeholder="Search..."
+                    />
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <!-- <div class="input-group no-border">
+                  <div class="com-sm-10" style="float:left;">
+                    <input
+                      style="margin-left: 20%;"
+                      type="text"
+                      value=""
+                      class="form-control"
+                      placeholder="Search..."
+                    />
+
+                  </div>
+                </div> -->
+          </div>
+        </div>
+      </form>
+    </div>
+    <div *ngIf="dataPresent; else noData">
+      <div *ngIf="booksResult">
+        <div *ngFor="let book of booksResult.results; let i = index">
+          <div
+            *ngIf="book.formats['image/jpeg'] != undefined"
+            class="card col-sm-4 col-xs-4 col-md-4 col-lg-4"
+            style="float: left;padding:0;background:transparent!important;"
+          >
+            <div class="card-header card-header-success card-header-icon"></div>
+            <div class="card-body" (click)="showBookDetails(book.formats)">
+              <div>
+                <img
+                  style="width: 150px;height: 200px;"
+                  [src]="book.formats['image/jpeg']"
+                />
+              </div>
+              <h3 style="font-weight: 400;">{{ book.title }}</h3>
+              <span class="tooltip"> {{ book.title }} </span>
+              <span *ngFor="let author of book.authors; let ind = index">
+                <p *ngIf="ind >= 1; else elseBlock">
+                  <!-- <h3 style="float: left;"> {{ author.name }} </h3>  -->
+                </p>
+                <ng-template #elseBlock>
+                  <h4>{{ author.name }}</h4>
+                </ng-template>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <ng-template #noData>
+      <h3>No viewable version available</h3>
+    </ng-template>
+  </div>
+</div>

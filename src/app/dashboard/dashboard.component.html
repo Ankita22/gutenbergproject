@@ -1,0 +1,77 @@
+<div class="main-content" style="background: #5E57E7 !important;">
+  <ngx-loading
+    [show]="loading"
+    [config]="{ backdropBorderRadius: '3px' }"
+  ></ngx-loading>
+  <div class="container-fluid" style="padding-top:10%;">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="row">
+          <button
+            class="btn btn-default button"
+            (click)="goToBooksDetails('fiction')"
+          >
+            <span class="books"> FICTION </span>
+            <span class="right">
+              <img src="assets/img/drawable-hdpi/ic_right_arrow.png"
+            /></span>
+          </button>
+          <button
+            class="btn btn-default button"
+            (click)="goToBooksDetails('drama')"
+          >
+            <span class="books"> DRAMA </span>
+            <span class="right">
+              <img src="assets/img/drawable-hdpi/ic_right_arrow.png"
+            /></span>
+          </button>
+          <button
+            class="btn btn-default button"
+            (click)="goToBooksDetails('humor')"
+          >
+            <span class="books"> HUMOR </span>
+            <span class="right">
+              <img src="assets/img/drawable-hdpi/ic_right_arrow.png"
+            /></span>
+          </button>
+          <button
+            class="btn btn-default button"
+            (click)="goToBooksDetails('politics')"
+          >
+            <span class="books"> POLITICS </span>
+            <span class="right">
+              <img src="assets/img/drawable-hdpi/ic_right_arrow.png"
+            /></span>
+          </button>
+          <button
+            class="btn btn-default button"
+            (click)="goToBooksDetails('philosophy')"
+          >
+            <span class="books"> PHILOSOPHY </span>
+            <span class="right">
+              <img src="assets/img/drawable-hdpi/ic_right_arrow.png"
+            /></span>
+          </button>
+          <button
+            class="btn btn-default button"
+            (click)="goToBooksDetails('history')"
+          >
+            <span class="books"> HISTORY </span>
+            <span class="right">
+              <img src="assets/img/drawable-hdpi/ic_right_arrow.png"
+            /></span>
+          </button>
+          <button
+            class="btn btn-default button"
+            (click)="goToBooksDetails('adventure')"
+          >
+            <span class="books"> ADVENTURE </span>
+            <span class="right">
+              <img src="assets/img/drawable-hdpi/ic_right_arrow.png"
+            /></span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,79 @@
+/deep/.card{
+
+    border-radius: 20px !important;
+}
+
+/* .wrap{
+    width: 100px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+
+.might-overflow {
+    text-overflow: ellipsis;
+    overflow : hidden;
+    white-space: nowrap;
+}
+
+.might-overflow:hover {
+    text-overflow: clip;
+    white-space: normal;
+    word-break: break-all;
+} */
+
+
+h3 {
+  white-space: nowrap; 
+  width: 90%; 
+  overflow: hidden;
+  text-overflow: ellipsis;
+  position: relative;
+  pointer-events:none;
+}
+
+h3:after {
+  content:"";
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 48px;
+  height: 48px;
+  z-index: 1;
+  pointer-events:initial;
+}
+
+h3:hover:after{
+  cursor: pointer;
+}
+
+.tooltip {
+  width: 60%;
+  visibility: hidden;
+  background-color: darkgray;
+  /* padding: 20px; */
+  -webkit-box-shadow: 0 0 50px 0 rgba(0,0,0,0.3);
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  color:black;
+}
+
+
+h3:hover + .tooltip {
+  visibility: visible;
+  transition: opacity 0.5s ease;
+  opacity: 1;
+}
+
+
+/deep/.table>thead>tr>th, .table>tbody>tr>th, .table>tfoot>tr>th, .table>thead>tr>td, .table>tbody>tr>td, .table>tfoot>tr>td{
+padding: 0;
+}
+
+/* input#search {
+    background-image: url(/assets/img/drawable-hdpi/ic_search.png);
+    background-repeat: no-repeat;
+ 
+} */

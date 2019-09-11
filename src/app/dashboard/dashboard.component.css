@@ -1,0 +1,15 @@
+    .button{
+        background-color: #4E4BCB;
+        width: 100%;
+        color: white;
+        font-weight: 500;
+        box-shadow: none !important;
+    }
+
+.books{
+    float:left;font-size: x-large;
+}
+    
+.right{
+    float: right;
+}
