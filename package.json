@@ -30,7 +30,7 @@
     "@angular/platform-browser-dynamic": "7.0.2",
     "@angular/platform-server": "7.0.2",
     "@angular/router": "7.0.2",
-    "ajv": "6.3.0",
+    "ajv": "6.12.3",
     "angular-calendar": "0.26.4",
     "angular-ionic-unzip": "^1.0.3",
     "animate.css": "3.5.2",
